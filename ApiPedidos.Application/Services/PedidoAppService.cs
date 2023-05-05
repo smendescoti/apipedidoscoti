@@ -39,7 +39,7 @@ namespace ApiPedidos.Application.Services
 
             var @event = new PedidoRealizadoEvent
             {
-                EventId = Guid.NewGuid(),
+                EventId = pedido.Id,
                 CreatedAt = DateTime.Now,
                 DetalhesPedido = JsonConvert.SerializeObject(command)
             };
